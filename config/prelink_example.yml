@@ -1,0 +1,5 @@
+## Credentials for PreLink Web Service.
+---
+wsdl_url: 'http://example.com/clinicservice.asmx?WSDL'
+station_id: change-me 
+pass_code: change-me
