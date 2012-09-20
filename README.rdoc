@@ -1,8 +1,6 @@
 = prelink
 A SOAP Web Service Client for interacting with PreLink Lab Information Systems
 
-Designed to work with a Rails Application
-
 
 == Configuration
 
@@ -20,5 +18,17 @@ Create a prelink.yml file under config/ with the following details:
 Get Test Codes
   prelink.test_codes
 
-Get Test Results
-  prelink.request_results
+Get New Test Results
+  prelink.get_new_results 
+
+Get a patient's results later than a given date  
+  prelink.get_results_by_date(:patient_id => 'P199999999999',
+                              :start_date => '2012-08-29',
+                              :end_date => '2012-09-30')
+
+Get a patient's results later than a given request number  
+  prelink.get_results_from_request_number(:patient_id => 'P199999999999',
+                                          :last_request_number => 'ABC123')
+
+Simplify response from Prelink  
+  Prelink.filter_response(response, method_name)

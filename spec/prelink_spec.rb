@@ -40,7 +40,7 @@ describe Prelink do
   #                             :start_date => '2012-08-29',
   #                             :end_date => '2012-09-30')
   it "should get results by date" do
-    expect { @prelink.get_new_results(:patient_id => 'P199999999999',
+    expect { @prelink.get_results_by_date(:patient_id => 'P199999999999',
                                       :start_date => '2012-08-29',
                                       :end_date => '2012-09-30') }.to_not raise_error
   end
